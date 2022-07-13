@@ -82,16 +82,16 @@ Below, I walk through all stages of my pipeline and process.
 
 #### Explore
 
-1. Ask 4 distinct questions of our data
-  a. Do M2m customers churn more than 1-yr or 2-yr customers?
-  b. Does paying by electronic check influence churn? Do customers paying by electronic check churn more than other        payment types?
-  c. Do customers with Fiber churn more than other internet service types?
-  d. Do adults with dependents churn more than adults without dependents? Furthermore, are single adults more likely to churn than customers with a partner?
-2. Explore these questions through visualizations
-  a. Barplots are used primarily due to our features being categorical variables
-  b. These plots illustrate statistical significance of our chosen features
-3. Statistical Testing is conducted on all relevant features to determine statistical significance
-4. Summary includes key takeaways from all features explored
+1. Ask 4 distinct questions of our data \
+  a. Do M2m customers churn more than 1-yr or 2-yr customers? \
+  b. Does paying by electronic check influence churn? Do customers paying by electronic check churn more than other        payment types? \
+  c. Do customers with Fiber churn more than other internet service types? \
+  d. Do adults with dependents churn more than adults without dependents? Furthermore, are single adults more likely to churn than customers with a partner? \
+2. Explore these questions through visualizations \
+  a. Barplots are used primarily due to our features being categorical variables \
+  b. These plots illustrate statistical significance of our chosen features \
+3. Statistical Testing is conducted on all relevant features to determine statistical significance \
+4. Summary includes key takeaways from all features explored \
 
 #### Modeling and Evaluate
 
