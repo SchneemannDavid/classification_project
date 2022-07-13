@@ -90,11 +90,17 @@ Below, I walk through all stages of my pipeline and process.
 2. Explore these questions through visualizations
   a. Barplots are used primarily due to our features being categorical variables
   b. These plots illustrate statistical significance of our chosen features
-3. Statistical Testing is conducted 
+3. Statistical Testing is conducted on all relevant features to determine statistical significance
+4. Summary includes key takeaways from all features explored
 
-#### Modeling
+#### Modeling and Evaluate
 
-#### Evaluate
+1. Select Evaluation Metric: Accuracy
+2. Evaluate a Baseline: ~73%
+3. Develop 3 distinct models
+4. Evaluate on Train and then on Validate (for promising feature sets)
+5. Once a top performing model is selected, evaluate on test dataset
+
 
 
 
