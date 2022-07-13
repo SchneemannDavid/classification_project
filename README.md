@@ -1,4 +1,5 @@
-# classification_project
+# Understanding Churn: Analyzing and Modeling Churn using Classification
+
 
 ## About the Project
 ### Project Goals
