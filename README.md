@@ -111,7 +111,18 @@ In seeking solutions to Telco's churn, we have explored a multiplicity of factor
 - Paying for fiber internet
 - Having a contract as a single adult, without a partner or dependents.
 
+The statistical significance of these features, combined within our analysis and models, expresses 95% confidence in the validity of our findings. With the addition of the other features within contract type, payment type, internet type, and family type, we have created robust models that perform significantly better than our baseline of 73%.
+
 Having fit the best performing model to our train, validate, and test datasets, we expect this model to perform with 80% accuracy in the future on data it has not seen, given no major changes to our data source.
+
+#### Recommendations
+There are a number of recommendations that can be offered based on the above analysis. These suggestions are tied directly to the findings within each of our primary drivers of churn:
+
+1. Month-to-Month contracts - Although month-to-month contracts are here to stay, we could feasibly limit churn by offering a discount on 1 and 2 yr contracts. By offering a discount that still maintains a healthy profit margin, we could incentivize customers to sign on for longer contracts which is shown to reduce churn in the long term.
+
+2. Electronic check - We have shown that churn is significantly higher for electronic check customers than any other payment type. Although there are multiple potential solutions to this phenomenon, I believe Telco needs to perform a full review of the customer process for submitting payment via electronic check. It is my experience that online portals for submitting payment by e-check can be inefficient, not well designed, and frustrating to the user. This could be a significant reason why customers who use this method of payment are cancelling their contracts.
+
+3. Fiber internet - This internet type expresses a significant amount of churn, despite being 
 
 
 
