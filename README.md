@@ -102,6 +102,17 @@ Below, I walk through all stages of my pipeline and process.
 4. Evaluate on Train and then on Validate (for promising feature sets)
 5. Once a top performing model is selected, evaluate on test dataset
 
+### Conclusion
+#### Summary
+In seeking solutions to Telco's churn, we have explored a multiplicity of factors in the dataset that affect churn rate. We have shown that some potential primary drivers of churn are :
+
+- Having a month-to-month contract
+- Paying by electronic check 
+- Paying for fiber internet
+- Having a contract as a single adult, without a partner or dependents.
+
+Having fit the best performing model to our train, validate, and test datasets, we expect this model to perform with 80% accuracy in the future on data it has not seen, given no major changes to our data source.
+
 
 
 
