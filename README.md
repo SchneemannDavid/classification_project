@@ -102,8 +102,11 @@ Below, I walk through all stages of my pipeline and process.
 4. Evaluate on Train and then on Validate (for promising feature sets)
 5. Once a top performing model is selected, evaluate on test dataset
 
+
 ### Conclusion
+
 #### Summary
+
 In seeking solutions to Telco's churn, we have explored a multiplicity of factors in the dataset that affect churn rate. We have shown that some potential primary drivers of churn are :
 
 - Having a month-to-month contract
@@ -116,14 +119,22 @@ The statistical significance of these features, combined within our analysis and
 Having fit the best performing model to our train, validate, and test datasets, we expect this model to perform with 80% accuracy in the future on data it has not seen, given no major changes to our data source.
 
 #### Recommendations
+
 There are a number of recommendations that can be offered based on the above analysis. These suggestions are tied directly to the findings within each of our primary drivers of churn:
 
 1. Month-to-Month contracts - Although month-to-month contracts are here to stay, we could feasibly limit churn by offering a discount on 1 and 2 yr contracts. By offering a discount that still maintains a healthy profit margin, we could incentivize customers to sign on for longer contracts which is shown to reduce churn in the long term.
 
 2. Electronic check - We have shown that churn is significantly higher for electronic check customers than any other payment type. Although there are multiple potential solutions to this phenomenon, I believe Telco needs to perform a full review of the customer process for submitting payment via electronic check. It is my experience that online portals for submitting payment by e-check can be inefficient, not well designed, and frustrating to the user. This could be a significant reason why customers who use this method of payment are cancelling their contracts.
 
-3. Fiber internet - This internet type expresses a significant amount of churn, despite being 
+3. Fiber internet - Customers with this internet type express a significant likelihood of churn, despite Fiber being the optimal option for internet access. Although fiber is undoubtedly more expensive to implement, due to infrastructure costs, the amount of potential churn of this internet type needs to inform our business practices. Options include a potential discount for fiber customers if this is profitably viable. Otherwise, increased company investment in fiber infrastructure may lead to increased profit margin down the road, allowing the company greater leverage for retaining these customers. 
 
+4. Customers with no partner or dependents (single adults) - This customer demographic has a significant likelihood of churn. Yet, attempting to retain these customers may not be the most effective option for maximizing customer retention. Instead, by observing the likelihood of churn for other partner/dependent statuses, we find that customers with dependents are less likely to churn. Therefore, offering a family discount for those customers who have dependents could attract more customers who fall under this demographic. This customer base has shown to be less likely to churn, thus decreasing potential churn by attracting more stable and committed customers.
 
+#### Next Steps
 
+Despite the overall effectiveness of our best-performing model, there is always room for improvement and optimization. \
+If given more time to pursue a better results, I would begin by further exploration and analysis of other features within our dataset. Through additional exploration I've already performed, I can say with confidence that there are a number of features I could analyze and implement into my models to improve prediction accuracy. \
+Namely, observing features such as whether a customer has online security or tech support could improve our models' predictions.
+
+Additionally, prompting customers who churn to fill out a simple satisfaction survey could produce meaningful insight into more specific reasons customers choose to cancel their contracts. This information could be analyzed using methods such as Natural Language Processing in order to improve Telco's understanding of its customers' needs and the resulting customer service they provide.
 
