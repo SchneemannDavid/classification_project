@@ -48,7 +48,10 @@ In order to meet the desire for customer retention at Telco Co., we will analyze
 | m2m      | Customers who have month to month contracts       |
 | yr1      | Customers who have 1-yr contracts       |
 | yr2      | Customers who have 1-yr contracts       |
-| a_bank_transfer   | Customers who pay via bank transfer (automatic)       |
+| DSL      | Customers who pay for DSL internet      |
+| fiber      | Customers who pay for fiber internet       |
+| no_int      | Customers who don't pay to have internet access       |
+| a_bank_tr   | Customers who pay via bank transfer (automatic)       |
 | a_ccard      | Customers who pay via credit card (automatic)      |
 | e_check      | Customers who pay via electronic check       |
 | m_check      | Customers who pay via mailed check       |
@@ -122,13 +125,13 @@ Having fit the best performing model to our train, validate, and test datasets, 
 
 There are a number of recommendations that can be offered based on the above analysis. These suggestions are tied directly to the findings within each of our primary drivers of churn:
 
-1. Month-to-Month contracts - Although month-to-month contracts are here to stay, we could feasibly limit churn by offering a discount on 1 and 2 yr contracts. By offering a discount that still maintains a healthy profit margin, we could incentivize customers to sign on for longer contracts which is shown to reduce churn in the long term.
+1. Month-to-Month contracts (m2m) - Although month-to-month contracts are here to stay, we could feasibly limit churn by offering a discount on 1 and 2 yr contracts. By offering a discount that still maintains a healthy profit margin, we could incentivize customers to sign on for longer contracts which is shown to reduce churn in the long term.
 
-2. Electronic check - We have shown that churn is significantly higher for electronic check customers than any other payment type. Although there are multiple potential solutions to this phenomenon, I believe Telco needs to perform a full review of the customer process for submitting payment via electronic check. It is my experience that online portals for submitting payment by e-check can be inefficient, not well designed, and frustrating to the user. This could be a significant reason why customers who use this method of payment are cancelling their contracts.
+2. Electronic check (e_check) - We have shown that churn is significantly higher for electronic check customers than any other payment type. Although there are multiple potential solutions to this phenomenon, I believe Telco needs to perform a full review of the customer process for submitting payment via electronic check. It is my experience that online portals for submitting payment by e-check can be inefficient, not well designed, and frustrating to the user. This could be a significant reason why customers who use this method of payment are cancelling their contracts.
 
 3. Fiber internet - Customers with this internet type express a significant likelihood of churn, despite Fiber being the optimal option for internet access. Although fiber is undoubtedly more expensive to implement, due to infrastructure costs, the amount of potential churn of this internet type needs to inform our business practices. Options include a potential discount for fiber customers if this is profitably viable. Otherwise, increased company investment in fiber infrastructure may lead to increased profit margin down the road, allowing the company greater leverage for retaining these customers. 
 
-4. Customers with no partner or dependents (single adults) - This customer demographic has a significant likelihood of churn. Yet, attempting to retain these customers may not be the most effective option for maximizing customer retention. Instead, by observing the likelihood of churn for other partner/dependent statuses, we find that customers with dependents are less likely to churn. Therefore, offering a family discount for those customers who have dependents could attract more customers who fall under this demographic. This customer base has shown to be less likely to churn, thus decreasing potential churn by attracting more stable and committed customers.
+4. Customers with no partner or dependents (no_pod) - This customer demographic has a significant likelihood of churn. Yet, attempting to retain these customers may not be the most effective option for maximizing customer retention. Instead, by observing the likelihood of churn for other partner/dependent statuses, we find that customers with dependents are less likely to churn. Therefore, offering a family discount for those customers who have dependents could attract more customers who fall under this demographic. This customer base has shown to be less likely to churn, thus decreasing potential churn by attracting more stable and committed customers.
 
 #### Next Steps
 

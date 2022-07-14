@@ -45,18 +45,25 @@ def prep_telco_data(df):
     df = pd.concat([df, dummy_df], axis=1)
     
     # Create addl. features
-    df['partner_w_dependents'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 1), 1, 0)
-    df['partner_no_dependents'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 0), 1, 0)
-    df['dependents_no_partner'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1), 1, 0)
+    df['p_w_d'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 1), 1, 0)
+    df['p_no_d'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 0), 1, 0)
+    df['d_no_p'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1), 1, 0)
     df['no_pod'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 0), 1, 0)
-    df['male_w_dependents'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1) & (df['gender_encoded'] == 0), 1, 0)
-    df['female_w_dependents'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1) & (df['gender_encoded'] == 1), 1, 0)
-    # encode number_relationships by utilizing information from dependents_encoded and partner_encoded
-    df['number_relationships'] = df['dependents_encoded'] + df['partner_encoded']
     
     # Rename significant features for ease of use
-    # df.rename(columns={'payment_type_Electronic check': 'e_check', 'contract_type_Month-to-month': 
-   
+    df = df.rename(columns={'payment_type_Electronic check': 'e_check', \
+                   'contract_type_Month-to-month': 'm2m', \
+                   'contract_type_One year': 'yr1', \
+                   'contract_type_Two year': 'yr2', \
+                   'internet_service_type_DSL': 'DSL', \
+                   'internet_service_type_Fiber optic': 'fiber', \
+                   'internet_service_type_None': 'no_int', \
+                   'payment_type_Bank transfer (automatic)': 'a_bank_tr', \
+                   'payment_type_Credit card (automatic)': 'a_ccard', \
+                   'payment_type_Electronic check': 'e_check', \
+                   'payment_type_Mailed check': 'm_check'
+                  }) 
+                  
     return df
 
 
@@ -103,16 +110,24 @@ def prep_telco_csv(df):
     df = pd.concat([df, dummy_df], axis=1)
     
     # Create addl. features
-    df['partner_w_dependents'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 1), 1, 0)
-    df['partner_no_dependents'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 0), 1, 0)
-    df['dependents_no_partner'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1), 1, 0)
+    df['p_w_d'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 1), 1, 0)
+    df['p_no_d'] = np.where((df['partner_encoded'] == 1) & (df['dependents_encoded'] == 0), 1, 0)
+    df['d_no_p'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1), 1, 0)
     df['no_pod'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 0), 1, 0)
-    df['male_w_dependents'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1) & (df['gender_encoded'] == 0), 1, 0)
-    df['female_w_dependents'] = np.where((df['partner_encoded'] == 0) & (df['dependents_encoded'] == 1) & (df['gender_encoded'] == 1), 1, 0)
-    # encode number_relationships by utilizing information from dependents_encoded and partner_encoded
-    df['number_relationships'] = df['dependents_encoded'] + df['partner_encoded']
+    
     
     # Rename significant features for ease of use
-    # df.rename(columns={'payment_type_Electronic check': 'e_check', 'contract_type_Month-to-month': 
+    df = df.rename(columns={'payment_type_Electronic check': 'e_check', \
+                   'contract_type_Month-to-month': 'm2m', \
+                   'contract_type_One year': 'yr1', \
+                   'contract_type_Two year': 'yr2', \
+                   'internet_service_type_DSL': 'DSL', \
+                   'internet_service_type_Fiber optic': 'fiber', \
+                   'internet_service_type_None': 'no_int', \
+                   'payment_type_Bank transfer (automatic)': 'a_bank_tr', \
+                   'payment_type_Credit card (automatic)': 'a_ccard', \
+                   'payment_type_Electronic check': 'e_check', \
+                   'payment_type_Mailed check': 'm_check'
+                  }) 
    
     return df

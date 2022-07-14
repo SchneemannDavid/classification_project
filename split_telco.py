@@ -31,7 +31,7 @@ def telco_split_model(df):
     # 70/30 train validate split
     train, validate = train_test_split(train, train_size=0.7, random_state=123, stratify=train.churn)
     
-    x_vars = ['contract_type_Month-to-month', 'contract_type_One year', 'contract_type_Two year', 'payment_type_Bank transfer (automatic)', 'payment_type_Credit card (automatic)', 'payment_type_Electronic check', 'payment_type_Mailed check', 'internet_service_type_DSL', 'internet_service_type_Fiber optic', 'internet_service_type_None', 'no_pod', 'partner_w_dependents', 'dependents_no_partner', 'tenure']
+    x_vars = ['m2m', 'yr1', 'yr2', 'a_bank_tr', 'a_ccard', 'e_check', 'm_check', 'DSL', 'fiber', 'no_int', 'no_pod', 'p_w_d', 'd_no_p', 'tenure']
     y_vars = ['churn']
 
     x_train, y_train = train[x_vars], train[y_vars]
