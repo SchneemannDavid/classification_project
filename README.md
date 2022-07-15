@@ -1,4 +1,4 @@
-# Understanding Churn at Telco: Analyzing and Modeling Churn using Classification
+# Understanding Churn at Telco
 
 
 ## About the Project
